@@ -1,6 +1,7 @@
 import pandas as pd
 import re
 def preprocess(data):
+    # regex to match pattern
     pattern = r"\d{1,2}/\d{1,2}/\d{2}, \d{2}:\d{2} -"
     messages = re.split(pattern, data)[1:]
     dates = re.findall(pattern, data)
